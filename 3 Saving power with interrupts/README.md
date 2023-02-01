@@ -72,16 +72,20 @@ Run the code in Part3.c, but this time uncomment the runCodeWithInterrupts() fun
 
 Then load up Energy Trace and perform the similar capture of Power with the LED Jumper taken off. Compare the two graphs and see if you can explain two things:
 1. What is causing the bias/baseline in the polling example to be higher than the interrupt example.
-  - 
+  - Polling is constantly looking for if the button is pressed, meanwhile interrupt ony uses power for the short time the button is pressed. Notice how in the graphs, interrupt uses a lot lower amount of power compared to polling, even if the LED is off/disconnected.
 2. Even with the LED unplugged, why is there still power increases when you press the button?
-  - 
+  - Because the device is using power to see if the button is pressed and when it is it tries to run the code to deactivate the light.
 
 
 # Screenshots and Answers to Questions
 **Replace this section with your screenshots of Energy Trace and provide some reasoning as to Questions 1 and 2 in the Power consumption of the Interrupts Section.**
 
+Power without interrupt
 ![Power without interrupt](https://user-images.githubusercontent.com/123009027/216146654-de17bc2b-485e-4c4e-8351-75bfe9ee6b00.PNG)
+Power without interrupt and LED disconnected
 ![Power without interrupt and LED disconnected](https://user-images.githubusercontent.com/123009027/216146742-4d026f87-d35d-46e8-bd6c-66f9251b6f2e.PNG)
+Power with interrupt
 ![Power with interrupt](https://user-images.githubusercontent.com/123009027/216146789-ed638041-0197-4129-bfc8-fa36648b3326.PNG)
+Power with interrupt and LED disconnected (best)
 ![Power with interrupt and LED disconnected](https://user-images.githubusercontent.com/123009027/216146622-b3a62fa7-4d55-44f1-a994-f94531992fe2.PNG)
 
